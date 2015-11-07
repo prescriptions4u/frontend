@@ -1,0 +1,32 @@
+          body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+          }
+          .jumbotron {
+            background-size: cover;
+            color: #FFFFFF;
+            text-shadow: 1px 1px #000000; 
+          }
+          .jumbotron h1 {
+            font-size: 50px;
+          }
+          .floatRight {
+            float: right;
+          }
+          .btn {
+            background: #000000;
+            color: #FFFFFF;
+            border: 1px solid white;
+          }
+          button.btn.btn-success {
+            background: #FFFFFF;
+            color: #000000;
+          }
+          .btn:hover {
+            background: #D56413;
+            border: 1px solid white;
+          }
+          button.btn.btn-success:hover {
+            background: #D56413;
+            border: 1px solid white;
+          }
