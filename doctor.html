@@ -25,7 +25,6 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script src="js/doctor.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -36,35 +35,69 @@
     <div class="row">
         <form role="form">
             <div class="col-lg-6">
-                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
                 <div class="form-group">
                     <label for="patientName">Patient Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="inputPatientName" id="patientName" placeholder="Patient Name" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        <input type="text" class="form-control" name="inputPatientName" id="patientName" placeholder="Enter patient's name" required>
+                        <span class="input-group-addon"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="patientAddress">Patient Address</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="inputPatientAddress" name="patientAddress" placeholder="Patient Address" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        <input type="text" class="form-control" id="inputPatientAddress" name="patientAddress" placeholder="Enter patient's address" required>
+                        <span class="input-group-addon"></span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="nameOfMedication">Name of Medication</label>
-                    <div>
-                        <select id="medications">
+                <div class="dropdown">
+                    <div class="input-group">
+                        <label for="nameOfMedication">Name of Medication</label>
+                        <div class ="form-group" id="nameOfMedication" name="nameOfMedication" placeholder="Enter medication">
+                            <select class="form-control" id="medications">
+                            </select>
+                        <div>
+                    </div>
+                </div class="form-group">
+                    <label for="dosage">Dosage</label>
+                    <div class="form-group" id="dosage" name="dosage">
+                        <select class="form-control">
+                            <option>1mg</option>
+                            <option>2mg</option>
+                            <option>3mg</option>
+                            <option>4mg</option>
+                            <option>5mg</option>
                         </select>
                     </div>
                 </div>
-                    <select>
-                        <option >
-
-                        </option>
-                    </select>
-                    
+                <div class="form-group">
+                    <label for="docMedRedNo">Doctor Medical Registration Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="docMedRedNo" name="docMedRedNo" placeholder="Enter Medical Registration Number" required>
+                        <span class="input-group-addon"></span>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="doctorAddress">Doctor Address</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="doctorAddress" name="doctorAddress" placeholder="Enter doctor's address">
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patientPrivateKey">Patient's Private Key</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="patientKey" name="patientKey" placeholder="Enter private key" required>
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="prescriptionDate">Date of Prescription</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="prescriptionDate" name="prescriptionDate" placeholder="Enter date of prescription" required>
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                
                 <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
             </div>
         </form>
@@ -85,5 +118,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        <script type="text/javascript" src="js/doctor.js"></script>
     </body>
 </html>
