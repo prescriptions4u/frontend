@@ -46,4 +46,5 @@ for(var i=0;i<obj.drugs.length;i++)
 {
     var option=$('<option></option>').text(obj.drugs[i]['drugName']);
   $('select#medications').append(option);
+
 }

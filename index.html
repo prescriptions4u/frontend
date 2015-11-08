@@ -11,11 +11,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 ​
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/doctorStyle.css">
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/doctorStyle.css">
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 ​
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -29,9 +29,9 @@
     
       <div class="container">
        
- <p> <img src= "https://dl.dropboxusercontent.com/u/212806/76894039823987429032_blockchain/Prescripchain%20-%20Logo.jpg"; style= "padding: 20px"; width="595" height="180"</p>
+ <p> <img src= "https://dl.dropboxusercontent.com/u/212806/76894039823987429032_blockchain/Prescripchain%20-%20Logo.jpg"; style= "padding: 20px"; width="595" height="180"></p>
 ​
-        <p> Prescripchain is a tool to enable doctors and pharmacists to reduce the instances of 'Doctor Shopping' by leveraging blockchain technology to create smart medical prescriptions. 'Colouring Coins’ allows us to create digital assets that contain a patients prescription. The coin’s journey from Doctor to Patient to Pharmacy gives greater visibility to pharmacists and prevents a patient from abusing the lack of communication channels between doctors and pharmacies.</p>
+        <p>Prescripchain aims to reduce ‘Doctor Shopping’ by leveraging blockchain technology to create smart medical prescriptions. ‘Colouring Coins’ allows us to create digital assets that contain a patient's prescription. The coin’s journey from Doctor to Patient to Pharmacy gives greater visibility to pharmacists and prevents a patient from abusing the lack of communication channels between doctors.</p>
         
       </div>
     </div>
@@ -41,76 +41,26 @@
       <div class="row">
         <div class="col-md-6">
           <h2>Doctor</h2>
-          <p>[Leo to insert] </p>
-          <p><a class="btn btn-primary btn-sm" href="#" role="button") >Doctor Login &raquo;</a></p>
+          <p>Prescripchain enables medical professionals to issue smart patient prescriptions and create a clear and secure method of tracking a patient's medical history. </p></br>
+          <p><a class="btn btn-primary btn-sm" href="#" role="button") >Doctor Login</a></p>
         </div>
         <div class="col-md-6">
           <h2>Pharmacist</h2>
-          <p>[Leo to insert] </p>
-          <p><a class="btn btn-primary btn-sm" href="#" role="button">Pharmacist Login &raquo;</a></p>
+          <p>Prescripchain provides pharmacists with a secure and accurate way to check a patient's prescription transaction history and ensure that they are receiving the medication that they need. </p>
+          <p><a class="btn btn-primary btn-sm" href="#" role="button">Pharmacist Login</a></p>
        </div>
       </div>
 ​
       <hr>
 ​
       <footer>
-        <p class="floatRight">&copy; Prescriptchain 2015</p>
+        <p class="floatRight">&copy; Prescripchain 2015</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 ​
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/doctor.js"></script>
 ​
-        <!--<script src="js/main.js"></script>-->
-        <script type="text/javascript">
-          
-          $(document).ready(function()
-          {
-​
-​
-            $("#login button").click(function()
-              {
-                
-                if($("#email").val()==="doctor" || $("#email").val()==="pharmacist"){
-                  window.location.href = './'+$("#email").val()+'.html'; 
-                }
-​
-                return false;
-​
-              });
-​
-​
-            $("#getPatient").click(function()
-              {
-                
-                $.get( "./patientData.json", function( data ) {
-                  console.log(data);
-​
-              });
-​
-                return false;
-              });
-​
-​
-            $.get( "./patientData.json", function( data ) {
-                  console.log(data);
-​
-            });
-​
-​
-​
-          });
-​
-        </script>
-​
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
     </body>
 </html>
