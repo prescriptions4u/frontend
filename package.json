@@ -1,0 +1,27 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Please see simplified use case and documentation on the /documenation repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prescriptions4u/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prescriptions4u/frontend/issues"
+  },
+  "homepage": "https://github.com/prescriptions4u/frontend#readme",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5",
+    "colu": "^0.8.4",
+    "jquery": "^2.1.4",
+    "modernizr": "^3.2.0"
+  }
+}
