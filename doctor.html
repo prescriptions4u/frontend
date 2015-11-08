@@ -3,120 +3,116 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-
-        <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="bootstrap.min.css">
-
-        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">         
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" href="/css/bootstrap-theme.min.css">         
 
         <!-- <link rel="stylesheet" href="/css/main.css"> -->
         <!-- main.css is empty -->
-        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
- <p> <img src= "https://dl.dropboxusercontent.com/u/212806/76894039823987429032_blockchain/Prescripchain%20-%20Logo.jpg"; style= "padding: 20px"; width="300" height="100"></p>
-<div class="container">
-    <div class="row">
-    <!-- action= the url where python is listening -->
-    <!-- This will send the stuff to Django -->
-    <!-- Get python to listen on 127.0.0.1:8000/transaction -->
-        <form role="form" method="POST" action="/transaction">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label for="patientName">Patient Name</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="inputPatientName" id="patientName" placeholder="Enter patient's name" required>
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="patientAddress">Patient Address</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="inputPatientAddress" name="patientAddress" placeholder="Enter patient's address" required>
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="docMedRedNo">Doctor Medical Registration Number</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="docMedRedNo" name="docMedRedNo" placeholder="Enter medical registration number" required>
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="doctorAddress">Doctor Address</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="doctorAddress" name="doctorAddress" placeholder="Enter doctor's address">
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="patientPrivateKey">Patient's Private Key</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="patientKey" name="patientKey" placeholder="Enter private key" required>
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="prescriptionDate">Date of Prescription</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="prescriptionDate" name="prescriptionDate" placeholder="Enter date of prescription" required>
-                        <span class="input-group-addon"></span>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <div class="input-group">
-                        <label for="nameOfMedication">Name of Medication</label>
-                        <div class ="form-group" id="nameOfMedication" name="nameOfMedication" placeholder="Enter medication">
-                            <select class="form-control" id="medications">
-                            </select>
-                        <div>
-                    </div>
-                </div class="form-group">
-                    <label for="dosage">Dosage</label>
-                    <div class="form-group" id="dosage" name="dosage">
-                        <select class="form-control">
-                            <option>1mg</option>
-                            <option>2mg</option>
-                            <option>3mg</option>
-                            <option>4mg</option>
-                            <option>5mg</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-            </div>
-        </form>
+      <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="header">
+      <p><img src= "https://dl.dropboxusercontent.com/u/212806/76894039823987429032_blockchain/Prescripchain%20-%20Logo.jpg"; style= "padding: 20px"; width="300" height="100">
+      </p>
     </div>
-</div>      
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <div class="container">
+        <div class="row">
+        <!-- action= the url where python is listening -->
+        <!-- This will send the stuff to Django -->
+        <!-- Get python to listen on 127.0.0.1:8000/transaction -->
+            <form role="form" method="POST" action="/transaction">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="inputPatientName" id="patientName" placeholder="Enter patient's name" required>
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAddress">Patient Address</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputPatientAddress" name="patientAddress" placeholder="Enter patient's address" required>
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="docMedRedNo">Doctor Medical Registration Number</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="docMedRedNo" name="docMedRedNo" placeholder="Enter medical registration number" required>
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctorAddress">Doctor Address</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="doctorAddress" name="doctorAddress" placeholder="Enter doctor's address">
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientPrivateKey">Patient's Private Key</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="patientKey" name="patientKey" placeholder="Enter private key" required>
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="prescriptionDate">Date of Prescription</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="prescriptionDate" name="prescriptionDate" placeholder="Enter date of prescription" required>
+                            <span class="input-group-addon"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="input-group">
+                            <label for="nameOfMedication">Name of Medication</label>
+                            <div class ="form-group" id="nameOfMedication" name="nameOfMedication" placeholder="Enter medication">
+                                <select class="form-control" id="medications">
+                                </select>
+                            <div>
+                        </div>
+                    </div class="form-group">
+                        <label for="dosage">Dosage</label>
+                        <div class="form-group" id="dosage" name="dosage">
+                            <select class="form-control">
+                                <option>1mg</option>
+                                <option>2mg</option>
+                                <option>3mg</option>
+                                <option>4mg</option>
+                                <option>5mg</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                </div>
+            </form>
+        </div>
+    </div>      
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/main.js"></script>
-        <script src="js/doctor.js"></script>
-
-    </body>
-
+      <script src="/js/vendor/bootstrap.min.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="js/doctor.js"></script>
+  </body>
 </html>
