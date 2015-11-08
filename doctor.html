@@ -743,6 +743,7 @@
     {
         var option=$('<option></option>').text(obj.drugs[i]['drugName']);
       $('select#medications').append(option);
+      $('select#medications').refresh;
     }
     </script>
 
