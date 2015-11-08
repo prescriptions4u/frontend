@@ -18,14 +18,16 @@
                     "dosage": "1 cigarette",
                     "number": 60,
                     "frequency": "as required",
-                    "reason": "anxiety"
+                    "reason": "anxiety",
+                    "warning": "true"
                 },
                 {
                     "medicationName": "Valium",
                     "dosage": "10mg",
                     "number": 15,
                     "frequency": "take one three times daily with meals",
-                    "reason": "anxiety"
+                    "reason": "anxiety",
+                    "warning": "false"
                 }
             ]
         },
@@ -44,14 +46,16 @@
                     "dosage": "1 cigarette",
                     "number": 80,
                     "frequency": "as required",
-                    "reason": "anxiety"
+                    "reason": "anxiety",
+                    "warning": "false"
                 },
                 {
                     "medicationName": "Valium",
                     "dosage": "10mg",
                     "number": 30,
                     "frequency": "take one three times daily with meals",
-                    "reason": "anxiety"
+                    "reason": "anxiety",
+                    "warning": "true"
                 }
             ]
         }

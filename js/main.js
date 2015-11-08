@@ -18,24 +18,6 @@ $(document).ready(function()
     });
 
 
-	$("#getPatient").click(function()
-    {
-  		
-  		$.get( "./patientData.json", function( data ) {
-  			console.log(data);
-
-		});
-
-  		return false;
-    });
-
-
-	$.get( "./patientData.json", function( data ) {
-  			console.log(data);
-
-	});
-
-
 
 });
 

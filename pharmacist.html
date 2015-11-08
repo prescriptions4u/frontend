@@ -33,7 +33,7 @@
         <![endif]-->
 
 <div class="container">
-    <div class="row">
+    <div class="row" id="getPatientForm">
         <form role="form">
             <div class="col-lg-6">
                 <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
@@ -81,13 +81,178 @@
             </div>
         </div>
     </div>
-</div>      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<div class="row" id="displayPatient">
+    <div id="patientData">
+
+    <script id="patientTemplate" type="text/x-jsrender">
+        <div>
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="patientName" name="patientName" value="{{:patientName}}" required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="patientDob">Patient DOB</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="patientDob" name="patientDob" value="{{:patientDob}}" required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="patientAddress">Patient Address</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="patientAddress" name="patientAddress" value="{{:patientAddress}}" required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+            </div>
+
+            <div class="scripts">
+            {{for scripts}}
+                <div class="script well">
+
+                    <div class="form-group">
+                        <label for="scriptId">Script id</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="scriptId" name="scriptId" value="{{:scriptId}}" required>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issued">Date</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="issued" name="issued" value="{{:issued}}" required>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="doctor">
+
+                        <div class="form-group">
+                            <label for="doctorName">Doctor Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="doctorName" name="doctorName" value="{{:doctor.name}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorMrn">Doctor MRN</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="doctorMrn" name="doctorMrn" value="{{:doctor.mrn}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorAddress">Doctor Address</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="doctorAddress" name="doctorAddress" value="{{:doctor.address}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorPhone">Doctor Phone</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="doctorPhone" name="doctorPhone" value="{{:doctor.phone}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="medications">
+                    {{for medications}}
+                    <div class="medication well warning-{{:warning}}">
+
+                        <div class="form-group">
+                            <label for="prescriptionId">Prescription id</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="prescriptionId" name="prescriptionId" value="{{:prescriptionId}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="medicationName">Medication Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="medicationName" name="medicationName" value="{{:medicationName}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dosage">Dosage</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="dosage" name="dosage" value="{{:dosage}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="number">Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="number" name="number" value="{{:number}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="frequency" name="frequency" value="{{:frequency}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Reason</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="reason" name="reason" value="{{:reason}}" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-info dispensed-button">Dispensed</button>
+                    <button type="button" class="btn btn-danger rejected-button">Rejected</button>
+
+                </div>
+                {{/for}}
+            </div>
+        {{/for}}
+    </div>
+</div>
+</script>
+
+    </div>
+</div>
+
+
+
+   
+</div>     
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
 
+        <script src="js/vendor/jsrender.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/pharmacist.js"></script>
+
+
+
+
+        
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

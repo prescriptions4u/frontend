@@ -5,10 +5,16 @@
    ========================================================================== */
 
 
+#patientData input[type="text"] {
+    pointer-events: none;
+    
+    background:#F5F5F5;
+ }
 
 
-
-
+.warning-true {
+	background-color: pink;
+}
 
 
 
